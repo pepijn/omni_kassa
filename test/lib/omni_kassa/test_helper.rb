@@ -3,15 +3,12 @@ require 'bundler/setup'
 require 'omni_kassa'
 
 require 'minitest/unit'
-require 'webrat'
+require 'capybara'
+require 'capybara/dsl'
 require 'rack/test'
 require 'sinatra'
 
 require './app'
-
-Webrat.configure do |config|
-  config.mode = :selenium
-end
 
 MiniTest::Unit.autorun
 

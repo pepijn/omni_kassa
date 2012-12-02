@@ -1,5 +1,3 @@
-require 'bundler/setup'
-require 'sinatra'
 require 'omni_kassa'
 require './test_settings'
 
@@ -25,6 +23,6 @@ post '/:amount' do
     succesful: omnikassa.successful?
   }
   puts data.to_yaml
-  omnikassa.response
+  render omnikassa.response
 end
 
