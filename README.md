@@ -6,7 +6,7 @@ Easier Rabobank OmniKassa payments. Extracted from www.studysquare.nl.
 Installation
 ------------
 
-Only works with Ruby 1.9.3. Add to your Gemfile:
+Supports Ruby 1.9.2+. Add to your Gemfile:
 
 ```ruby
 gem 'omni_kassa'
