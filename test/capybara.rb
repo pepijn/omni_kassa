@@ -1,6 +1,6 @@
 require 'omni_kassa/test_helper'
 
-class HelloWorldTest < MiniTest::Unit::TestCase
+class AcceptanceTest < MiniTest::Unit::TestCase
   include Capybara::DSL
 
   Capybara.default_driver = :selenium

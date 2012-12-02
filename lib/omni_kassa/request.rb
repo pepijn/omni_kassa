@@ -22,6 +22,13 @@ module OmniKassa
       end
     end
 
+    def valid?
+      REQUIRED.map do |attr|
+        value = send attr
+        return false if value.nil?
+      end
+    end
+
     def perform
       HTTParty.post(OmniKassa.url, query: query).body
     end
