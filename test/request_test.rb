@@ -1,10 +1,13 @@
 require 'omni_kassa/test_helper'
 
+ORDER_ID = rand(10000)
+AMOUNT   = rand(10000)
+
 class RequestTest < MiniTest::Unit::TestCase
   def setup
     @request = OmniKassa::Request.new
-    @request.order_id          = 42
-    @request.amount            = 1337
+    @request.order_id          = ORDER_ID
+    @request.amount            = AMOUNT
     @request.normal_return_url = 'https://google.com'
   end
 
@@ -15,8 +18,8 @@ class RequestTest < MiniTest::Unit::TestCase
     assert_equal "omnikassatest#{Time.now.to_i}",
       @request.transaction_reference
 
-    assert_equal 42, @request.order_id
-    assert_equal 1337, @request.amount
+    assert_equal ORDER_ID, @request.order_id
+    assert_equal AMOUNT, @request.amount
     assert_equal 'https://google.com',
       @request.normal_return_url
   end

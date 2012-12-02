@@ -6,7 +6,7 @@ module OmniKassa
       97 => :request_timeout
     }
 
-    attr_accessor :data, :seal, :order_id, :response_code
+    attr_accessor :data, :seal, :order_id, :response_code, :amount
 
     def initialize(params)
       self.data = params[:Data]
@@ -29,7 +29,7 @@ module OmniKassa
     end
 
     def response_code=(response_code)
-      raise ResponseCodeError if response_code.scan(/\D/).present?
+      raise ResponseCodeError if response_code.to_s.scan(/\D/).present?
       @response_code = response_code.to_i
     end
 
