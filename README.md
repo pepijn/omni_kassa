@@ -6,7 +6,7 @@ Easier Rabobank OmniKassa payments. Extracted from www.studysquare.nl.
 Installation
 ------------
 
-Supports Ruby 1.9.2+. Add to your Gemfile:
+Supports Ruby 1.9.2, 1.9.3 and 2.0.0. Add to your Gemfile:
 
 ```ruby
 gem 'omni_kassa'
@@ -44,7 +44,7 @@ class OrdersController
     omnikassa.order_id          = @order.id
     omnikassa.amount            = @order.amount
     omnikassa.normal_return_url = payments_url
-    
+
     # Redirects user to OmniKassa
     render text: omnikassa.perform
   end
@@ -63,7 +63,7 @@ class PaymentsController
     if response.successful?
       @order.payed = true
       @order.save
-      
+
       redirect_to root_url, success: "Payment succeeded"
     else
       redirect_to root_url, alert: "Payment failed"
