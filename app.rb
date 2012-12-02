@@ -15,14 +15,8 @@ end
 
 post '/:amount' do
   omnikassa = OmniKassa::Response.new(params)
+  puts omnikassa.inspect
 
-  data = {
-    raw: omnikassa,
-    response_code: omnikassa.response_code,
-    response: omnikassa.response,
-    succesful: omnikassa.successful?
-  }
-  puts data.to_yaml
-  render omnikassa.response
+  omnikassa.response.to_s
 end
 
