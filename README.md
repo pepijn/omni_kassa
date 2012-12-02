@@ -1,4 +1,12 @@
-omni_kassa
+Omni Kassa
 ==========
 
-Easier Rabobank OmniKassa payments
+Easier Rabobank OmniKassa payments.
+
+Usage
+-----
+
+Gemfile:
+
+  gem 'omni_kassa'
+
