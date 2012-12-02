@@ -1,4 +1,4 @@
-OmniKassa
+OmniKassa [![Build Status](https://secure.travis-ci.org/pepijn/omni_kassa.png?branch=master)](https://travis-ci.org/pepijn/omni_kassa)
 =========
 
 Easier Rabobank OmniKassa payments. Extracted from www.studysquare.nl.
