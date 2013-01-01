@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omni_kassa (1.0.0)
+    omni_kassa (1.0.1)
       activesupport
       httparty
 
