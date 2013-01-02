@@ -3,7 +3,8 @@ Gem::Specification.new do |s|
   s.version = '1.0.1'
   s.author  = 'Pepijn Looije'
   s.email   = 'pepijn@plict.nl'
-  s.summary = 'Easier Rabobank OmniKassa payments'
+  s.description = s.summary = 'Easier Rabobank OmniKassa payments'
+  s.homepage = 'https://github.com/pepijn/omni_kassa'
 
   s.required_ruby_version = '>= 1.9'
 
