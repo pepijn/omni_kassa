@@ -1,7 +1,7 @@
 OmniKassa [![Build Status](https://secure.travis-ci.org/pepijn/omni_kassa.png?branch=master)](https://travis-ci.org/pepijn/omni_kassa) [![Dependency Status](https://gemnasium.com/pepijn/omni_kassa.png)](https://gemnasium.com/pepijn/omni_kassa) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pepijn/omni_kassa)
 =========
 
-Easier Rabobank OmniKassa payments. Extracted from www.studysquare.nl.
+Easier Rabobank OmniKassa payments. Extracted from www.studysquare.nl. RDocs[http://rdoc.info/projects/pepijn/omni_kassa].
 
 Installation
 ------------
@@ -20,7 +20,7 @@ OmniKassa.config(
   merchant_id:  '002020000000001',
   currency_code: 978, # Euro
   url: 'https://payment-webinit.simu.omnikassa.rabobank.nl/paymentServlet',
-  transaction_reference: lambda {|order_id| "omnikassatest#{Time.now.to_i}" }
+  transaction_reference: lambda { |order_id| "omnikassatest#{Time.now.to_i}" }
 )
 ```
 
