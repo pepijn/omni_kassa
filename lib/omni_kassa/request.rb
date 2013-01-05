@@ -11,7 +11,7 @@ module OmniKassa
 
     attr_accessor :merchant_id, :currency_code, :transaction_reference,
       :order_id, :amount, :normal_return_url, :key_version,
-      :automatic_return_url
+      :automatic_response_url
 
     def initialize
       self.key_version = KEY_VERSION

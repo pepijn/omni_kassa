@@ -9,6 +9,7 @@ class RequestTest < MiniTest::Unit::TestCase
     @request.order_id          = ORDER_ID
     @request.amount            = AMOUNT
     @request.normal_return_url = 'https://google.com'
+    @request.automatic_response_url = @request.normal_return_url
   end
 
   def test_attributes
@@ -22,6 +23,8 @@ class RequestTest < MiniTest::Unit::TestCase
     assert_equal AMOUNT, @request.amount
     assert_equal 'https://google.com',
       @request.normal_return_url
+    assert_equal 'https://google.com',
+      @request.automatic_response_url
   end
 
   def test_invalid_without_order_id
