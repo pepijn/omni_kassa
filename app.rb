@@ -11,6 +11,8 @@ get '/:amount' do
   omnikassa.amount = params[:amount]
   omnikassa.normal_return_url = request.url
   omnikassa.automatic_response_url = request.url
+
+  puts omnikassa.query
   omnikassa.perform
 end
 
