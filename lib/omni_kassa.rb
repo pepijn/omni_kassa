@@ -2,7 +2,8 @@ require 'httparty'
 require 'active_support/core_ext/string'
 
 module OmniKassa
-  REQUEST_SETTINGS = :merchant_id, :currency_code, :transaction_reference
+  REQUEST_SETTINGS = :merchant_id, :currency_code, :transaction_reference,
+    :customer_language
   SETTINGS = REQUEST_SETTINGS + [:secret_key, :url]
 
   def self.config(settings)

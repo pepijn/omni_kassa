@@ -8,7 +8,7 @@ module OmniKassa
 
     REQUIRED = :merchant_id, :currency_code, :transaction_reference,
       :order_id, :amount, :normal_return_url, :key_version,
-      :automatic_response_url
+      :automatic_response_url, :customer_language
 
     attr_accessor *REQUIRED
 

@@ -3,6 +3,7 @@ OmniKassa.config(
   merchant_id: '002020000000001',
   currency_code: 978,
   transaction_reference: lambda {|order_id| "omnikassatest#{Time.now.to_i}" },
-  url: 'https://payment-webinit.simu.omnikassa.rabobank.nl/paymentServlet'
+  url: 'https://payment-webinit.simu.omnikassa.rabobank.nl/paymentServlet',
+  customer_language: :nl
 )
 
