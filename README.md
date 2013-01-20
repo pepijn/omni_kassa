@@ -7,6 +7,8 @@ OmniKassa
 
 Easier Rabobank OmniKassa payments. Extracted from www.studysquare.nl. [RDocs](http://rdoc.info/projects/pepijn/omni_kassa).
 
+[gem]: https://rubygems.org/gems/omni_kassa
+
 Installation
 ------------
 
