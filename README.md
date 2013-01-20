@@ -1,5 +1,5 @@
 OmniKassa 
-[![Gem Version](https://badge.fury.io/rb/omni_kassa.png)]
+[![Gem Version](https://badge.fury.io/rb/omni_kassa.png)][gem]
 [![Build Status](https://secure.travis-ci.org/pepijn/omni_kassa.png?branch=master)](https://travis-ci.org/pepijn/omni_kassa) 
 [![Dependency Status](https://gemnasium.com/pepijn/omni_kassa.png)](https://gemnasium.com/pepijn/omni_kassa) 
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pepijn/omni_kassa)
