@@ -50,4 +50,12 @@ class RequestTest < MiniTest::Unit::TestCase
   def test_perform_valid
     refute_match /ERROR/, @request.perform
   end
+  
+  def test_optional_params
+    @request.payment_mean_brand_list = 'IDEAL'
+    
+    assert_equal 'IDEAL', @request.payment_mean_brand_list
+    
+    assert_match /paymentMeanBrandList=IDEAL/, @request.send(:data)
+  end
 end
