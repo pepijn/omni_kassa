@@ -10,7 +10,9 @@ module OmniKassa
       :order_id, :amount, :normal_return_url, :key_version,
       :automatic_response_url, :customer_language
 
-    attr_accessor *REQUIRED
+    OPTIONAL = :payment_mean_brand_list, :customer_language, :expiration_date
+
+    attr_accessor *REQUIRED, *OPTIONAL
 
     def initialize
       self.key_version = KEY_VERSION
@@ -51,11 +53,13 @@ module OmniKassa
     end
 
     def data_hash
-      REQUIRED.map do |attr|
-        value = send attr
-        raise RequestError, "attribute '#{attr}' missing" if value.nil?
-
-        [attr.to_s.camelcase(:lower), value]
+      REQUIRED.each do |param|
+        value = send param
+        raise RequestError, "attribute '#{param}' missing" if value.nil?
+      end
+      [OPTIONAL, REQUIRED].flatten.map do |param|
+        value = send param
+        [param.to_s.camelcase(:lower), value]
       end
     end
 
