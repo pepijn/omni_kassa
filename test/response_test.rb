@@ -26,6 +26,9 @@ class ResponseTest < MiniTest::Unit::TestCase
     @response.response_code = 60
     assert_equal :pending, @response.response
 
+    @response.response_code = 90
+    assert_equal :pending, @response.response
+
     @response.response_code = 97
     assert_equal :expired, @response.response
 

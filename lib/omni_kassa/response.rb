@@ -22,7 +22,7 @@ module OmniKassa
     end
 
     def response
-      RESPONSE_CODES[response_code] or :unknown_failure
+      RESPONSE_CODES[response_code] || :unknown_failure
     end
 
     def data=(data)
