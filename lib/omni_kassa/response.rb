@@ -20,9 +20,12 @@ module OmniKassa
       verify_seal!
     end
 
-    # Pending will eventually return
+    def pending?
+      response == :pending
+    end
+
     def successful?
-      SUCCESSFUL_RESPONSES.include? response
+      response == :success
     end
 
     def response
