@@ -2,8 +2,10 @@ module OmniKassa
   class Response
     RESPONSE_CODES = {
       0  => :success,
-      17 => :user_cancellation,
-      97 => :request_timeout
+      17 => :cancelled,
+      60 => :pending,
+      90 => :pending,
+      97 => :expired
     }
 
     attr_accessor :data, :seal, :order_id, :response_code, :amount

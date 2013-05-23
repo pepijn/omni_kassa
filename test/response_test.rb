@@ -21,10 +21,13 @@ class ResponseTest < MiniTest::Unit::TestCase
     assert_equal :success, @response.response
 
     @response.response_code = 17
-    assert_equal :user_cancellation, @response.response
+    assert_equal :cancelled, @response.response
+
+    @response.response_code = 60
+    assert_equal :pending, @response.response
 
     @response.response_code = 97
-    assert_equal :request_timeout, @response.response
+    assert_equal :expired, @response.response
 
     @response.response_code = 1 # not 0
     assert_equal :unknown_failure, @response.response
