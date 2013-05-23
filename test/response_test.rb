@@ -19,21 +19,27 @@ class ResponseTest < MiniTest::Unit::TestCase
 
   def test_responses
     assert_equal :success, @response.response
+    assert @response.successful?
 
     @response.response_code = 17
     assert_equal :cancelled, @response.response
+    refute @response.successful?
 
     @response.response_code = 60
     assert_equal :pending, @response.response
+    assert @response.successful?
 
     @response.response_code = 90
     assert_equal :pending, @response.response
+    assert @response.successful?
 
     @response.response_code = 97
     assert_equal :expired, @response.response
+    refute @response.successful?
 
     @response.response_code = 1 # not 0
     assert_equal :unknown_failure, @response.response
+    refute @response.successful?
   end
 
   def test_invalid_seal

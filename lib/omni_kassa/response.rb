@@ -8,6 +8,9 @@ module OmniKassa
       97 => :expired
     }
 
+    # Pending turns into success
+    SUCCESSFUL_RESPONSES = [:success, :pending]
+
     attr_accessor :data, :seal, :order_id, :response_code, :amount
 
     def initialize(params)
@@ -17,8 +20,9 @@ module OmniKassa
       verify_seal!
     end
 
+    # Pending will eventually return
     def successful?
-      response == :success
+      SUCCESSFUL_RESPONSES.include? response
     end
 
     def response
@@ -50,7 +54,7 @@ module OmniKassa
     end
 
     def data_hash
-      Hash[data.split('|').map {|a| a.split('=') }]
+      Hash[data.split('|').map { |a| a.split('=') }]
     end
 
     class SealMismatchError < OmniKassaError; end
