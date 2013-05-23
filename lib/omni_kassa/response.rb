@@ -17,12 +17,16 @@ module OmniKassa
       verify_seal!
     end
 
+    def pending?
+      response == :pending
+    end
+
     def successful?
       response == :success
     end
 
     def response
-      RESPONSE_CODES[response_code] or :unknown_failure
+      RESPONSE_CODES[response_code] || :unknown_failure
     end
 
     def data=(data)
@@ -50,7 +54,7 @@ module OmniKassa
     end
 
     def data_hash
-      Hash[data.split('|').map {|a| a.split('=') }]
+      Hash[data.split('|').map { |a| a.split('=') }]
     end
 
     class SealMismatchError < OmniKassaError; end
