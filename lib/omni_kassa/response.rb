@@ -8,9 +8,6 @@ module OmniKassa
       97 => :expired
     }
 
-    # Pending turns into success
-    SUCCESSFUL_RESPONSES = [:success, :pending]
-
     attr_accessor :data, :seal, :order_id, :response_code, :amount
 
     def initialize(params)
