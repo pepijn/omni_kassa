@@ -65,6 +65,8 @@ class PaymentsController
     response = OmniKassa::Response.new(params)
 
     @order = Order.find(response.order_id)
+    
+    return if response.pending? # Payment is pending; serve an explanation to the customer
 
     if response.successful?
       @order.payed = true
