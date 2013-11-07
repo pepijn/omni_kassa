@@ -36,7 +36,7 @@ module OmniKassa
 
     def response_code=(response_code)
       raise ResponseCodeError if response_code.to_s.scan(/\D/).present?
-      @response_code = response_code.to_i
+      @response_code = Integer(response_code)
     end
 
     protected

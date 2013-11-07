@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'omni_kassa'
 
-require 'minitest/unit'
+require 'minitest/autorun'
 require 'rack/test'
 
 require './test_settings'
@@ -12,5 +12,5 @@ require './test_settings'
 #require 'sinatra'
 #require './app'
 
-MiniTest::Unit.autorun
+MiniTest.autorun
 

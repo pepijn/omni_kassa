@@ -7,7 +7,7 @@ RESPONSE_PARAMS =  {
   Seal: '46204f0e97394293c9270b6313e78524027acba1f83d4ce9682848e1f5927ab3'
 }
 
-class ResponseTest < MiniTest::Unit::TestCase
+class ResponseTest < MiniTest::Test
   def setup
     @params = RESPONSE_PARAMS.clone
     @response = OmniKassa::Response.new(@params)
