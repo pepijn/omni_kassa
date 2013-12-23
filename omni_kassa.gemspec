@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.email   = 'pepijn@plict.nl'
   s.description = s.summary = 'Easier Rabobank OmniKassa payments'
   s.homepage = 'https://github.com/pepijn/omni_kassa'
+  s.licenses = 'MIT'
 
   s.required_ruby_version = '>= 1.9'
 
