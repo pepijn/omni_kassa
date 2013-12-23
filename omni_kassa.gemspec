@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'omni_kassa'
-  s.version = '1.3.0'
+  s.version = '1.4.0'
   s.author  = 'Pepijn Looije'
   s.email   = 'pepijn@plict.nl'
   s.description = s.summary = 'Easier Rabobank OmniKassa payments'
