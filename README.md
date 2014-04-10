@@ -70,7 +70,7 @@ class PaymentsController
     return if response.pending? # Payment is pending; serve an explanation to the customer
 
     if response.successful?
-      @order.payed = true
+      @order.paid = true
       @order.save
 
       redirect_to root_url, success: "Payment succeeded"
