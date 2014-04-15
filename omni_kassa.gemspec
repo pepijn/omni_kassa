@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'omni_kassa'
-  s.version = '1.4.0'
+  s.version = '1.4.1'
   s.author  = 'Pepijn Looije'
   s.email   = 'pepijn@plict.nl'
   s.description = s.summary = 'Easier Rabobank OmniKassa payments'
@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 1.9'
 
-  s.add_dependency 'httparty'
-  s.add_dependency 'activesupport'
+  s.add_dependency 'httparty', '>= 0.9.0'
+  s.add_dependency 'activesupport', '3.2.0'
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rack-test'
