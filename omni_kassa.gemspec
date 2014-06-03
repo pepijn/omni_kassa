@@ -1,4 +1,7 @@
-require_relative 'lib/omni_kassa/version'
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
+
+require 'omni_kassa/version'
 
 Gem::Specification.new do |s|
   s.name    = 'omni_kassa'
