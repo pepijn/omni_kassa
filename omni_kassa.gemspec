@@ -1,6 +1,8 @@
+require_relative 'lib/omni_kassa/version'
+
 Gem::Specification.new do |s|
   s.name    = 'omni_kassa'
-  s.version = '1.4.2'
+  s.version = OmniKassa::VERSION::STRING
   s.author  = 'Pepijn Looije'
   s.email   = 'pepijn@plict.nl'
   s.description = s.summary = 'Easier Rabobank OmniKassa payments'
@@ -18,6 +20,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sinatra'
   #s.add_development_dependency 'capybara'
 
-  s.files = Dir["#{File.dirname(__FILE__)}/**/*"]
+  s.files = Dir.glob("{lib,test}/**/*") + %w(README.md LICENSE)
 end
 
