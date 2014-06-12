@@ -4,7 +4,7 @@ module OmniKassa
       0  => :success,
       17 => :cancelled,
       60 => :pending,
-      90 => :pending,
+      90 => :failed,
       97 => :expired
     }
 
