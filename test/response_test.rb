@@ -34,8 +34,7 @@ class ResponseTest < MiniTest::Test
     refute @response.successful?
 
     @response.response_code = 90
-    assert_equal :pending, @response.response
-    assert @response.pending?
+    assert_equal :failed, @response.response
     refute @response.successful?
 
     @response.response_code = 97
