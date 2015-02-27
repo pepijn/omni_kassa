@@ -31,8 +31,7 @@ module OmniKassa
     end
 
     def perform
-      # SSLv3 is a TravisCI requirement; won't run otherwise
-      HTTParty.post(OmniKassa.url, query: query, ssl_version: :SSLv3).body
+      HTTParty.post(OmniKassa.url, query: query).body
     end
 
     def transaction_reference
