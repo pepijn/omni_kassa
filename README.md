@@ -4,7 +4,7 @@
 [![Dependency Status](https://gemnasium.com/pepijn/omni_kassa.png)](https://gemnasium.com/pepijn/omni_kassa) 
 [![Code Climate](https://codeclimate.com/github/pepijn/omni_kassa.png)](https://codeclimate.com/github/pepijn/omni_kassa)
 
-Easier Rabobank OmniKassa payments. Extracted from www.studysquare.nl. [RDocs](http://rdoc.info/projects/pepijn/omni_kassa).
+Easier Rabobank OmniKassa payments. Once extracted from www.studysquare.nl. [RDocs](http://rdoc.info/projects/pepijn/omni_kassa).
 
 [gem]: https://rubygems.org/gems/omni_kassa
 
